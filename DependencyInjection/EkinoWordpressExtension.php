@@ -37,6 +37,7 @@ class EkinoWordpressExtension extends Extension
         'post',
         'post_meta',
         'term',
+        'term_meta',
         'term_relationships',
         'term_taxonomy',
         'user',
