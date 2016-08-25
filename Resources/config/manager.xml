@@ -36,6 +36,11 @@
             <argument>%ekino.wordpress.entity.post_meta.class%</argument>
         </service>
 
+        <service id="ekino.wordpress.manager.term_meta_default" class="Ekino\WordpressBundle\Manager\TermMetaManager" public="false">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%ekino.wordpress.entity.term_meta.class%</argument>
+        </service>
+
         <service id="ekino.wordpress.manager.term_default" class="Ekino\WordpressBundle\Manager\TermManager" public="false">
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument>%ekino.wordpress.entity.term.class%</argument>
