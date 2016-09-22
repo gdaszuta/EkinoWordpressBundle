@@ -10,8 +10,8 @@
 
 namespace Ekino\WordpressBundle\Manager;
 
-use Ekino\WordpressBundle\Entity\Post;
-use Ekino\WordpressBundle\Entity\PostMeta;
+use Ekino\WordpressBundle\Model\Post;
+use Ekino\WordpressBundle\Model\PostMeta;
 use Ekino\WordpressBundle\Repository\PostMetaRepository;
 
 /**
