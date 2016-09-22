@@ -11,7 +11,7 @@
 namespace Ekino\WordpressBundle\Manager;
 
 use Doctrine\ORM\EntityManager;
-use Ekino\WordpressBundle\Entity\Post;
+use Ekino\WordpressBundle\Model\Post;
 use Ekino\WordpressBundle\Repository\PostRepository;
 use Hautelook\Phpass\PasswordHash;
 use Symfony\Component\HttpFoundation\Request;
