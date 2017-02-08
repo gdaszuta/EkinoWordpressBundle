@@ -332,11 +332,11 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     }
 
     /**
-     * @param Post $post
+     * @param PostInterface $post
      *
      * @return Comment
      */
-    public function setPost(Post $post)
+    public function setPost(PostInterface $post)
     {
         $this->post = $post;
 
@@ -344,7 +344,7 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     }
 
     /**
-     * @return Post
+     * @return PostInterface
      */
     public function getPost()
     {
