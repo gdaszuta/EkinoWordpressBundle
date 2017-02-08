@@ -2,6 +2,8 @@
 
 namespace Ekino\WordpressBundle\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 interface PostInterface
 {
     public function setAuthor(User $author);
