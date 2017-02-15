@@ -94,7 +94,7 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     protected $type = '';
 
     /**
-     * @var Comment
+     * @var int
      */
     protected $parent = 0;
 
@@ -312,19 +312,19 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     }
 
     /**
-     * @param Comment $parent
+     * @param int $parentId
      *
      * @return Comment
      */
-    public function setParent(Comment $parent)
+    public function setParent($parentId)
     {
-        $this->parent = $parent;
+        $this->parent = $parentId;
 
         return $this;
     }
 
     /**
-     * @return Comment
+     * @return int
      */
     public function getParent()
     {
