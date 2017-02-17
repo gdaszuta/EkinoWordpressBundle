@@ -53,10 +53,5 @@
                 <option name="default">0</option>
             </options>
         </field>
-        <field name="parent" type="bigint" column="comment_parent">
-            <options>
-                <option name="default">0</option>
-            </options>
-        </field>
     </mapped-superclass>
 </doctrine-mapping>
