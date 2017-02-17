@@ -103,6 +103,12 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
      */
     protected $user = 0;
 
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+        $this->dateGmt = new \DateTime();
+    }
+
     /**
      * @return int
      */
@@ -389,12 +395,6 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     public function getUser()
     {
         return $this->user;
-    }
-
-    public function __construct()
-    {
-        $this->date = new \DateTime('@0');
-        $this->dateGmt = new \DateTime('@0');
     }
 
     /**
