@@ -129,17 +129,16 @@ interface CommentInterface
     public function getKarma();
 
     /**
-     * @param CommentInterface $parent
+     * @param int $parent
      *
      * @return Comment
      */
-    public function setParent(CommentInterface $parent);
+    public function setParent($parent);
 
     /**
      * @return int
      */
     public function getParent();
-
 
     /**
      * @param PostInterface $post
