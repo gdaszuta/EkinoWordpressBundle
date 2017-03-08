@@ -94,7 +94,7 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     protected $type = '';
 
     /**
-     * @var Comment
+     * @var int
      */
     protected $parent = 0;
 
@@ -102,6 +102,12 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
      * @var User
      */
     protected $user = 0;
+
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+        $this->dateGmt = new \DateTime();
+    }
 
     /**
      * @return int
@@ -312,19 +318,19 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     }
 
     /**
-     * @param Comment $parent
+     * @param int $parentId
      *
      * @return Comment
      */
-    public function setParent(Comment $parent)
+    public function setParent($parentId)
     {
-        $this->parent = $parent;
+        $this->parent = $parentId;
 
         return $this;
     }
 
     /**
-     * @return Comment
+     * @return int
      */
     public function getParent()
     {
@@ -332,11 +338,11 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     }
 
     /**
-     * @param Post $post
+     * @param PostInterface $post
      *
      * @return Comment
      */
-    public function setPost(Post $post)
+    public function setPost(PostInterface $post)
     {
         $this->post = $post;
 
@@ -344,7 +350,7 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     }
 
     /**
-     * @return Post
+     * @return PostInterface
      */
     public function getPost()
     {
@@ -389,12 +395,6 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     public function getUser()
     {
         return $this->user;
-    }
-
-    public function __construct()
-    {
-        $this->date = new \DateTime('@0');
-        $this->dateGmt = new \DateTime('@0');
     }
 
     /**

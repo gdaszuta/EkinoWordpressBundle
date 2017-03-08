@@ -20,7 +20,7 @@ use Doctrine\Common\Collections\Criteria;
  *
  * @author Vincent Composieux <composieux@ekino.com>
  */
-abstract class Post implements WordpressEntityInterface, WordpressContentInterface
+abstract class Post implements WordpressEntityInterface, WordpressContentInterface, PostInterface
 {
     const COMMENT_STATUS_OPEN = 'open';
     const COMMENT_STATUS_CLOSED = 'closed';
