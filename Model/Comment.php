@@ -10,6 +10,8 @@
 
 namespace Ekino\WordpressBundle\Model;
 
+use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * Class Comment.
  *
@@ -378,11 +380,11 @@ abstract class Comment implements WordpressEntityInterface, WordpressContentInte
     }
 
     /**
-     * @param User $user
+     * @param UserInterface $user
      *
      * @return Comment
      */
-    public function setUser(User $user)
+    public function setUser(UserInterface $user)
     {
         $this->user = $user;
 

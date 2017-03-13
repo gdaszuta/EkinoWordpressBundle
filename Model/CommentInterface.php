@@ -2,6 +2,8 @@
 
 namespace Ekino\WordpressBundle\Model;
 
+use Symfony\Component\Security\Core\User\UserInterface;
+
 interface CommentInterface
 {
     /**
@@ -165,11 +167,11 @@ interface CommentInterface
     public function getType();
 
     /**
-     * @param User $user
+     * @param UserInterface $user
      *
      * @return Comment
      */
-    public function setUser(User $user);
+    public function setUser(UserInterface $user);
 
     /**
      * @return User
